@@ -50,4 +50,8 @@ class LocationViewController: UIViewController {
         loadLocation()
     }
     
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return UIStatusBarStyle.default
+    }
+    
 }

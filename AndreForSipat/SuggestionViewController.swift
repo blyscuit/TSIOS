@@ -26,6 +26,9 @@ class SuggestionViewController: UIViewController {
     }
     
     
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
 }
 
 
@@ -58,4 +61,5 @@ extension SuggestionViewController: TGLParallaxCarouselDelegate {
     func carouselView(_ carouselView: TGLParallaxCarousel, willDisplayItem item: TGLParallaxCarouselItem, forIndex index: Int) {
         print("")
     }
+    
 }

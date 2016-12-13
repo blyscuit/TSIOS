@@ -111,5 +111,9 @@
 - (IBAction)closePress:(id)sender {
     [self.delegate highlightViewClose:self];
 }
+- (UIStatusBarStyle)preferredStatusBarStyle
+{
+    return UIStatusBarStyleLightContent;
+}
 
 @end
