@@ -15,6 +15,7 @@
 		6819220F1E0046D9003BB684 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6819220D1E0046D9003BB684 /* LaunchScreen.storyboard */; };
 		6819221A1E0046D9003BB684 /* AndreForSipatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 681922191E0046D9003BB684 /* AndreForSipatTests.swift */; };
 		681922251E0046D9003BB684 /* AndreForSipatUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 681922241E0046D9003BB684 /* AndreForSipatUITests.swift */; };
+		681922351E00601A003BB684 /* HighlightDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = 681922341E00601A003BB684 /* HighlightDetail.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,9 @@
 		681922201E0046D9003BB684 /* AndreForSipatUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AndreForSipatUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		681922241E0046D9003BB684 /* AndreForSipatUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AndreForSipatUITests.swift; sourceTree = "<group>"; };
 		681922261E0046D9003BB684 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		681922321E006019003BB684 /* AndreForSipat-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AndreForSipat-Bridging-Header.h"; sourceTree = "<group>"; };
+		681922331E00601A003BB684 /* HighlightDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HighlightDetail.h; sourceTree = "<group>"; };
+		681922341E00601A003BB684 /* HighlightDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HighlightDetail.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,10 +106,13 @@
 				681922021E0046D9003BB684 /* AppDelegate.swift */,
 				681922041E0046D9003BB684 /* FirstViewController.swift */,
 				681922061E0046D9003BB684 /* SecondViewController.swift */,
+				681922331E00601A003BB684 /* HighlightDetail.h */,
+				681922341E00601A003BB684 /* HighlightDetail.m */,
 				681922081E0046D9003BB684 /* Main.storyboard */,
 				6819220B1E0046D9003BB684 /* Assets.xcassets */,
 				6819220D1E0046D9003BB684 /* LaunchScreen.storyboard */,
 				681922101E0046D9003BB684 /* Info.plist */,
+				681922321E006019003BB684 /* AndreForSipat-Bridging-Header.h */,
 			);
 			path = AndreForSipat;
 			sourceTree = "<group>";
@@ -196,6 +203,7 @@
 				TargetAttributes = {
 					681921FE1E0046D8003BB684 = {
 						CreatedOnToolsVersion = 8.1;
+						LastSwiftMigration = 0810;
 						ProvisioningStyle = Automatic;
 					};
 					681922141E0046D9003BB684 = {
@@ -265,6 +273,7 @@
 				681922071E0046D9003BB684 /* SecondViewController.swift in Sources */,
 				681922031E0046D9003BB684 /* AppDelegate.swift in Sources */,
 				681922051E0046D9003BB684 /* FirstViewController.swift in Sources */,
+				681922351E00601A003BB684 /* HighlightDetail.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -414,10 +423,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = AndreForSipat/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.thinc.AndreForSipat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "AndreForSipat/AndreForSipat-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -426,10 +438,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = AndreForSipat/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.thinc.AndreForSipat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "AndreForSipat/AndreForSipat-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
