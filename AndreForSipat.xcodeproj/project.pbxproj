@@ -23,6 +23,7 @@
 		681922421E0085C4003BB684 /* SuggestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 681922411E0085C4003BB684 /* SuggestionViewController.swift */; };
 		681922441E0086AA003BB684 /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 681922431E0086AA003BB684 /* CustomView.swift */; };
 		681922461E008729003BB684 /* CustomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 681922451E008729003BB684 /* CustomView.xib */; };
+		687355861E009A8700FF8F61 /* FlickToDismissViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 687355851E009A8700FF8F61 /* FlickToDismissViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		681922411E0085C4003BB684 /* SuggestionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuggestionViewController.swift; sourceTree = "<group>"; };
 		681922431E0086AA003BB684 /* CustomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomView.swift; path = ../../CustomView.swift; sourceTree = "<group>"; };
 		681922451E008729003BB684 /* CustomView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CustomView.xib; path = ../../CustomView.xib; sourceTree = "<group>"; };
+		687355851E009A8700FF8F61 /* FlickToDismissViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlickToDismissViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,6 +174,7 @@
 			isa = PBXGroup;
 			children = (
 				6819223A1E0084DB003BB684 /* .gitkeep */,
+				687355851E009A8700FF8F61 /* FlickToDismissViewController.swift */,
 				681922431E0086AA003BB684 /* CustomView.swift */,
 				681922451E008729003BB684 /* CustomView.xib */,
 				6819223B1E0084DB003BB684 /* TGLParallaxCarousel.swift */,
@@ -323,6 +326,7 @@
 				681922031E0046D9003BB684 /* AppDelegate.swift in Sources */,
 				681922421E0085C4003BB684 /* SuggestionViewController.swift in Sources */,
 				681922441E0086AA003BB684 /* CustomView.swift in Sources */,
+				687355861E009A8700FF8F61 /* FlickToDismissViewController.swift in Sources */,
 				681922051E0046D9003BB684 /* FirstViewController.swift in Sources */,
 				6819223F1E0084DB003BB684 /* TGLParallaxCarousel.swift in Sources */,
 				681922351E00601A003BB684 /* HighlightDetail.m in Sources */,

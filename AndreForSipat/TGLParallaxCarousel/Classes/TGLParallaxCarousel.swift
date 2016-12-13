@@ -256,6 +256,7 @@ open class TGLParallaxCarousel: UIView {
         }
         else {
             selectedIndex = tappedIndex
+            self.delegate?.carouselView(self, didSelectItemAtIndex: tappedIndex)
         }
     }
     
@@ -337,7 +338,7 @@ open class TGLParallaxCarousel: UIView {
         let offsetToAdd = xDisplacement * -CGFloat(selectedIndex) - offsetItems
         moveCarousel(-offsetToAdd)
         updatePageControl(selectedIndex)
-        delegate?.carouselView(self, didSelectItemAtIndex: selectedIndex)
+//        delegate?.carouselView(self, didSelectItemAtIndex: selectedIndex)
     }
     
     fileprivate func factorForXDisp(_ x: CGFloat) -> CGFloat {
