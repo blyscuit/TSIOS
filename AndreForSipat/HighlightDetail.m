@@ -61,7 +61,7 @@
     
     yPostion += 10;
     
-    self.inimage = [[UIImageView alloc] initWithFrame:CGRectMake(0, yPostion+200, screenWidth, 1200)];
+    self.inimage = [[UIImageView alloc] initWithFrame:CGRectMake(0, yPostion-15, screenWidth, 1300)];
     self.inimage.contentMode = UIViewContentModeScaleAspectFit;
     self.inimage.image = [UIImage imageNamed:@"Cells"];
     [scrollView addSubview:self.inimage];
