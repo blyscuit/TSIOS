@@ -32,7 +32,7 @@ class SuggestionViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.tabBarController?.navigationItem.title = "Suggestion"
+        self.tabBarController?.navigationItem.title = "Suggestions"
     }
     
 }

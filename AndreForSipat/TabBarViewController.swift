@@ -19,6 +19,14 @@ class TabBarViewController: UITabBarController {
         navbar.tintColor = UIColor.white
         navbar.titleTextAttributes = [NSForegroundColorAttributeName : UIColor.white]
         
+        let shadowView = UIView(frame: self.navigationController!.navigationBar.frame)
+        shadowView.backgroundColor = UIColor.white
+        shadowView.layer.masksToBounds = false
+        shadowView.layer.shadowOpacity = 0.4 // your opacity
+        shadowView.layer.shadowOffset = CGSize(width: 0, height: 2) // your offset
+        shadowView.layer.shadowRadius =  4 //your radius
+        self.view.addSubview(shadowView)
+        
         // Do any additional setup after loading the view.
     }
 
