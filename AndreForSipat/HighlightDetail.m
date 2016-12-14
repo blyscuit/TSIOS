@@ -15,6 +15,7 @@
 @property (strong, nonatomic) IBOutlet UIImageView *topicImage;
 @property (strong, nonatomic) IBOutlet UILabel *topicLabel;
 @property (strong, nonatomic) IBOutlet UIView *blurView;
+@property (strong, nonatomic) IBOutlet UIScrollView *scrollView;
 
 @end
 
@@ -42,40 +43,39 @@
     yPostion += 0;
     
     CGRect fullScreenRect = [[UIScreen mainScreen] applicationFrame];
-    UIScrollView *scrollView = [[UIScrollView alloc] initWithFrame:fullScreenRect];
-    scrollView.backgroundColor = [UIColor whiteColor];
-    scrollView.contentSize = CGSizeMake(screenWidth, 1400);
-    scrollView.delegate = self;
-    scrollView.showsVerticalScrollIndicator = YES;
+//    UIScrollView *scrollView = [[UIScrollView alloc] initWithFrame:fullScreenRect];
+    self.scrollView.contentSize = CGSizeMake(screenWidth, 1400);
+    self.scrollView.delegate = self;
+    self.scrollView.showsVerticalScrollIndicator = YES;
     [self.view setBackgroundColor:[UIColor whiteColor]];
     
     self.image = [[UIImageView alloc] initWithFrame:CGRectMake(0, yPostion-44, screenWidth, screenWidth)];
     [self.image setImage:[UIImage imageNamed:@"I11"]];
     [self.image setContentMode:UIViewContentModeScaleAspectFit];
     [self.image setClipsToBounds:YES];
-    [scrollView addSubview:self.image];
+    [self.scrollView addSubview:self.image];
     
     UIView *lineView = [[UIView alloc] initWithFrame:CGRectMake(25, yPostion, screenWidth-50, 0.5)];
     lineView.backgroundColor = [UIColor colorWithRed:163/255 green:163/255 blue:163/255 alpha:1];
-    [scrollView addSubview:lineView];
+    [self.scrollView addSubview:lineView];
     
     yPostion += 10;
     
-    self.inimage = [[UIImageView alloc] initWithFrame:CGRectMake(0, yPostion-15, screenWidth, 1300)];
+    self.inimage = [[UIImageView alloc] initWithFrame:CGRectMake(0, yPostion+70, screenWidth, 1300)];
     self.inimage.contentMode = UIViewContentModeScaleAspectFit;
     self.inimage.image = [UIImage imageNamed:@"Cells"];
-    [scrollView addSubview:self.inimage];
+    [self.scrollView addSubview:self.inimage];
     
     yPostion += 10;
     
     yPostion += (screenWidth-50)*2/3;
     
     //add background
-    UIView *backGround = [[UIView alloc] initWithFrame:CGRectMake(0, screenWidth+44, screenWidth, scrollView.contentSize.height - screenWidth)];
+    UIView *backGround = [[UIView alloc] initWithFrame:CGRectMake(0, screenWidth+44, screenWidth, self.scrollView.contentSize.height - screenWidth)];
     backGround.backgroundColor = [UIColor whiteColor];
-    [scrollView insertSubview:backGround aboveSubview:self.image];
+    [self.scrollView insertSubview:backGround aboveSubview:self.image];
     
-    [self.view insertSubview:scrollView belowSubview:bluredEffectView];// = scrollView;
+    [self.view insertSubview:self.scrollView belowSubview:bluredEffectView];// = scrollView;
     
     
     
