@@ -81,6 +81,11 @@
     
 }
 
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewWillAppear:YES];
+    self.tabBarController.navigationItem.title = @"News";
+}
+
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
     CGFloat yOffset = scrollView.contentOffset.y;
     //NSLog(@"yOffset = %f",yOffset);

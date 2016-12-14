@@ -54,4 +54,9 @@ class LocationViewController: UIViewController {
         return UIStatusBarStyle.default
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.tabBarController?.navigationItem.title = "Location"
+    }
+    
 }

@@ -24,5 +24,18 @@ class SecondViewController: UIViewController {
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.tabBarController?.navigationItem.title = "Room Schedule"
+        
+        let rightBarButton = UIBarButtonItem()
+        rightBarButton.title = "Reserve"
+        self.tabBarController?.navigationItem.rightBarButtonItem = rightBarButton
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        self.tabBarController?.navigationItem.rightBarButtonItem = nil
+    }
 }
 
